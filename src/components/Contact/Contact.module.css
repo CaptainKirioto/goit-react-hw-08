@@ -1,0 +1,31 @@
+.contactWrap {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  min-width: 300px;
+  gap: 40px;
+  & button {
+    background-color: pink;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+  }
+}
+
+.contactsInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.icon {
+  margin-right: 8px;
+}

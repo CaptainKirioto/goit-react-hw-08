@@ -1,0 +1,19 @@
+.searchWrap {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 200px;
+}
