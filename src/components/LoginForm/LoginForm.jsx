@@ -1,16 +1,22 @@
 import { Field, Formik, Form } from "formik";
 import s from "./LoginForm.module.css";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/auth/operations";
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const initialValues = {
     email: "",
     password: "",
   };
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    dispatch(login(values));
     actions.resetForm();
   };
+
+  // Form -- autoComplete="off"
 
   return (
     <div className={s.wrapper}>

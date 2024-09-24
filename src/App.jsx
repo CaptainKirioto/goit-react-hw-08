@@ -1,11 +1,9 @@
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+// import { useDispatch } from "react-redux";
+// import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 // import { lazy, Suspense } from "react";
 
-import { fetchContacts } from "./redux/contacts/contactsOps";
-
-import Navigation from "./components/Navigation/Navigation.jsx";
+import AppBar from "./components/AppBar/AppBar.jsx";
 import s from "./App.module.css";
 
 import HomePage from "./pages/HomePage/HomePage.jsx";
@@ -15,16 +13,16 @@ import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 
 function App() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchContacts());
+  // }, [dispatch]);
 
   return (
     <div className={s.wrapper}>
       <h1 className={s.title}>Phonebook</h1>
-      <Navigation />
+      <AppBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegistrationPage />} />

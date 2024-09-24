@@ -1,15 +1,8 @@
-.nav {
+.auth {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
-/* .nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-} */
 
 .link {
   color: rgb(61, 23, 4);

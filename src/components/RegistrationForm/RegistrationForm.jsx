@@ -1,10 +1,12 @@
 import { Field, Formik, Form } from "formik";
 import s from "./RegistrationForm.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const initialValues = {
     name: "",
@@ -13,10 +15,13 @@ const RegistrationForm = () => {
   };
 
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    // console.log(values);
     dispatch(register(values));
     actions.resetForm();
+    console.log(isLoggedIn);
   };
+
+  // Form -- autoComplete="off"
 
   return (
     <div className={s.wrapper}>
