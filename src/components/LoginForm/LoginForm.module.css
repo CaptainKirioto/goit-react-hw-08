@@ -15,6 +15,7 @@
   flex-direction: column;
   gap: 10px;
 
+  margin-bottom: 50px;
   padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
@@ -40,4 +41,10 @@
   border: 1px solid black;
   border-radius: 10px;
   width: 200px;
+}
+
+.redirect {
+  background-color: pink;
+  border-radius: 10px;
+  padding: 10px;
 }

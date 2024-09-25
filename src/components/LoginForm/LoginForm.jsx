@@ -2,6 +2,7 @@ import { Field, Formik, Form } from "formik";
 import s from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/auth/operations";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -34,6 +35,11 @@ const LoginForm = () => {
           <button type="submit">Submit</button>
         </Form>
       </Formik>
+
+      <div className={s.redirect}>
+        If you&apos;re new here, please{" "}
+        <Link to="/register">register here</Link>
+      </div>
     </div>
   );
 };
