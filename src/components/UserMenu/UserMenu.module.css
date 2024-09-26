@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  button {
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+  }
+}

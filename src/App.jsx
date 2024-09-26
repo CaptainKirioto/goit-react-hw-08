@@ -29,8 +29,6 @@ function App() {
     <p>Refreshing page, please wait</p>
   ) : (
     <div className={s.wrapper}>
-      <h1 className={s.title}>Phonebook</h1>
-
       <AppBar />
       {/* <Layout> */}
       <Suspense fallback={null}>

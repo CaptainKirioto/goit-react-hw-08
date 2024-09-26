@@ -1,18 +1,20 @@
 .wrap {
-  max-width: 1280px;
+  max-width: 670px;
   background-color: papayawhip;
-  padding: 20px;
-  border-radius: 10px 100px;
+  /* background-color: rgb(246, 226, 180); */
+  padding: 30px;
+  border-radius: 10px;
   margin: 0 auto;
 }
 
-.info,
-.quote {
-  text-align: center;
-  /* max-width: 800px; */
+.info {
+  text-align: left;
 }
 
 .head {
   text-align: center;
   margin-bottom: 10px;
+  font-family: "Old Standard TT", system-ui;
+  font-weight: 700;
+  font-style: normal;
 }

@@ -3,7 +3,7 @@ import s from "./HomePage.module.css";
 const HomePage = () => {
   return (
     <div className={s.wrap}>
-      <h1 className={s.head}>Welcome to Phonebook!</h1>
+      <h1 className={s.head}>Welcome to PhoneBook!</h1>
       <p className={s.info}>
         Here you can save all of your contacts with maximum comfort and safety
         ☎️ 📖

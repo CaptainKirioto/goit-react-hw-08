@@ -1,0 +1,15 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+}
+
+.contact {
+  width: calc((100% - 20px) / 3);
+}

@@ -47,9 +47,10 @@ const ContactForm = () => {
         validationSchema={ContactsSchema}
       >
         <Form className={s.form}>
+          <h3 className={s.head}>Add new contact</h3>
           <label className={s.label}>
             <span>Name</span>
-            <Field className={s.input} name="name" />
+            <Field className={s.input} name="name" placeholder="Jane Lane" />
             <ErrorMessage
               name="name"
               component="span"
@@ -58,7 +59,11 @@ const ContactForm = () => {
           </label>
           <label className={s.label}>
             <span>Number</span>
-            <Field className={s.input} name="number" />
+            <Field
+              className={s.input}
+              name="number"
+              placeholder="000-000-000"
+            />
             <ErrorMessage
               name="number"
               component="span"

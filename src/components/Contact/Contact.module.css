@@ -10,9 +10,10 @@
   width: fit-content;
   min-width: 300px;
   gap: 40px;
+  background-color: rgb(255, 240, 214);
   & button {
     background-color: pink;
-    border: 1px solid black;
+    border: none;
     border-radius: 10px;
     height: 40px;
     width: 60px;

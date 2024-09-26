@@ -6,6 +6,7 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import { selectError, selectLoading } from "../../redux/contacts/contactsSlice";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/contactsOps";
+import s from "./ContactsPage.module.css";
 
 const ContactsPage = () => {
   const loading = useSelector(selectLoading);
@@ -18,9 +19,11 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <ContactForm />
-      <SearchBox />
+    <div className={s.wrapper}>
+      <div className={s.left}>
+        <ContactForm />
+        <SearchBox />
+      </div>
       {loading && <Loader />}
       {error && <h3>Sorry, something went wrong...</h3>}
       <ContactList />
