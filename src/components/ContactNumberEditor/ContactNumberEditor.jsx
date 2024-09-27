@@ -1,7 +1,7 @@
 import { useState } from "react";
 import s from "./ContactNumberEditor.module.css";
 import { useDispatch } from "react-redux";
-import { editContactNumber } from "../../redux/contacts/contactsOps";
+import { editContactNumber } from "../../redux/contacts/operations";
 
 const ContactNumberEditor = ({ initialValue, contactId, onClose }) => {
   const dispatch = useDispatch();

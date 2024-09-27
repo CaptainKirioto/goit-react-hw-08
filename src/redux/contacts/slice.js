@@ -5,7 +5,7 @@ import {
   addContact,
   editContactName,
   editContactNumber,
-} from "./contactsOps";
+} from "./operations";
 
 import { logout } from "../auth/operations";
 

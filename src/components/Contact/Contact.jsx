@@ -2,7 +2,7 @@ import s from "./Contact.module.css";
 import { SiAlienware } from "react-icons/si";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contacts/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 import { useState } from "react";
 import ContactNameEditor from "../ContactNameEditor/ContactNameEditor";
 import ContactNumberEditor from "../ContactNumberEditor/ContactNumberEditor";
