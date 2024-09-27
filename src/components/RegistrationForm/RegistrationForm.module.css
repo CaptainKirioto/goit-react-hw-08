@@ -7,24 +7,30 @@
 }
 
 .head {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  text-align: center;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
+  gap: 15px;
+  background-color: rgb(255, 241, 214);
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(102, 94, 79);
   border-radius: 10px;
+  margin-bottom: 50px;
 
   & button {
     margin-top: 5px;
-    padding: 5px;
-    background-color: pink;
-    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(102, 94, 79);
+    color: white;
+    border: none;
     border-radius: 10px;
+  }
+  & button:hover {
+    background-color: rgb(37, 35, 29);
   }
 }
 
@@ -35,9 +41,23 @@
 }
 
 .input {
-  padding: 5px;
+  padding: 10px;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid rgb(102, 94, 79);
   border-radius: 10px;
-  width: 200px;
+  width: 250px;
+  height: 20px;
+  font-size: 1em;
+}
+
+.redirect {
+  border: 1px solid rgb(102, 94, 79);
+  background-color: rgb(255, 241, 214);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: small;
 }

@@ -14,21 +14,19 @@ const ContactForm = () => {
 
   const ContactsSchema = Yup.object({
     name: Yup.string()
-      .min(3, "Longer, please!")
+      .min(2, "Longer, please!")
       .max(50, "Shorter, please!")
       .required("Type something in!"),
     number: Yup.string()
       .required("Type something in!")
-      .min(3, "Longer, please!")
-      .max(50, "Shorter, please!")
-      .matches(/^\+?[0-9-]+$/, "It's a phone NUMBER"),
+      .matches(/^\+?[0-9-]+$/, "It's a phone NUMBER")
+      .min(6, "Longer, please!")
+      .max(50, "Shorter, please!"),
   });
 
   const dispatch = useDispatch();
 
   const handleSubmit = (data, actions) => {
-    console.log(data);
-
     const newContact = {
       name: data.name,
       number: data.number,

@@ -38,3 +38,9 @@ img {
 button {
   cursor: pointer;
 }
+
+input {
+  font-family: "Old Standard TT", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

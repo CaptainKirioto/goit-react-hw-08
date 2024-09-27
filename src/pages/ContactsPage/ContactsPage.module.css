@@ -1,8 +1,7 @@
-.wrapper {
-  /* padding: 30px;
+.forms {
+  /* margin: 0 auto; */
   display: flex;
-  align-items: center;
-  gap: 50px; */
-  /* width: 1700px; */
-  margin: 0 auto;
+  align-items: baseline;
+  justify-content: center;
+  gap: 40px;
 }

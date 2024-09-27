@@ -1,21 +1,27 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-// import { lazy, Suspense } from "react";
+import { lazy } from "react";
 
-import AppBar from "./components/AppBar/AppBar.jsx";
-import s from "./App.module.css";
-
-import HomePage from "./pages/HomePage/HomePage.jsx";
-import RegistrationPage from "./pages/RegistrationPage/RegistrationPage.jsx";
-import LoginPage from "./pages/LoginPage/LoginPage.jsx";
-import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 import { refreshUser } from "./redux/auth/operations.js";
 import Layout from "./components/Layout/Layout.jsx";
 import { selectIsRefreshing } from "./redux/auth/selectors.js";
 import { RestrictedRoute } from "./components/RestrictedRoute/RestrictedRoute.jsx";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute.jsx";
+import s from "./App.module.css";
+import { ToastContainer } from "react-toastify";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
+const RegistrationPage = lazy(() =>
+  import("./pages/RegistrationPage/RegistrationPage.jsx")
+);
+const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage.jsx"));
+const ContactsPage = lazy(() =>
+  import("./pages/ContactsPage/ContactsPage.jsx")
+);
+const NotFoundPage = lazy(() =>
+  import("./pages/NotFoundPage/NotFoundPage.jsx")
+);
 
 function App() {
   const dispatch = useDispatch();
@@ -29,27 +35,27 @@ function App() {
     <p>Refreshing page, please wait</p>
   ) : (
     <div className={s.wrapper}>
-      <AppBar />
-      {/* <Layout> */}
+      <ToastContainer />
       <Suspense fallback={null}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route
-            path="/register"
-            element={<RestrictedRoute component={<RegistrationPage />} />}
-          />
-          <Route
-            path="/login"
-            element={<RestrictedRoute component={<LoginPage />} />}
-          />
-          <Route
-            path="/contacts"
-            element={<PrivateRoute component={<ContactsPage />} />}
-          />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route
+              path="/register"
+              element={<RestrictedRoute component={<RegistrationPage />} />}
+            />
+            <Route
+              path="/login"
+              element={<RestrictedRoute component={<LoginPage />} />}
+            />
+            <Route
+              path="/contacts"
+              element={<PrivateRoute component={<ContactsPage />} />}
+            />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
         </Routes>
       </Suspense>
-      {/* </Layout> */}
     </div>
   );
 }

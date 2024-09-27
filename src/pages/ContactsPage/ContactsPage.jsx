@@ -3,7 +3,7 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
 import Loader from "../../components/Loader/Loader";
 import SearchBox from "../../components/SearchBox/SearchBox";
-import { selectError, selectLoading } from "../../redux/contacts/contactsSlice";
+import { selectError, selectLoading } from "../../redux/contacts/selectors";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/contactsOps";
 import s from "./ContactsPage.module.css";
@@ -20,7 +20,7 @@ const ContactsPage = () => {
 
   return (
     <div className={s.wrapper}>
-      <div className={s.left}>
+      <div className={s.forms}>
         <ContactForm />
         <SearchBox />
       </div>

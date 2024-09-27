@@ -10,7 +10,7 @@ export default function Loader() {
         height="80"
         width="80"
         color="#4fa94d"
-        borderColor="#ffbfcb"
+        borderColor="#665e4f"
         ariaLabel="progress-bar-loading"
         wrapperStyle={{}}
         wrapperClass=""

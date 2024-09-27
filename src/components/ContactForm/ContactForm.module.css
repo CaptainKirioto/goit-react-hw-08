@@ -4,14 +4,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  h3 {
-    text-align: center;
-    /* margin-bottom: 5px; */
-    font-family: "Old Standard TT", serif;
-    font-size: 25px;
-    font-weight: 700;
-    font-style: bold;
-  }
 }
 
 .form {
@@ -23,12 +15,26 @@
   border: 1px solid black;
   border-radius: 10px;
 
+  h3 {
+    text-align: center;
+    /* margin-bottom: 5px; */
+    font-family: "Old Standard TT", serif;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: bold;
+  }
+
   & button {
     margin-top: 5px;
     padding: 5px;
-    background-color: pink;
+    /* background-color: rgb(176, 172, 160); */
+    background-color: rgb(102, 94, 79);
+    color: white;
     border: none;
     border-radius: 10px;
+  }
+  & button:hover {
+    background-color: rgb(37, 35, 29);
   }
 }
 
@@ -43,11 +49,9 @@
   outline: none;
   border: 1px solid black;
   border-radius: 10px;
-  width: 200px;
-}
-
-.input::placeholder {
-  font-style: italic;
+  width: 250px;
+  height: 20px;
+  font-size: 1em;
 }
 
 .errorMessage {
