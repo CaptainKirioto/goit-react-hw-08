@@ -38,3 +38,29 @@ export const addContact = createAsyncThunk(
     }
   }
 );
+
+export const editContactName = createAsyncThunk(
+  "contacts/editContactName",
+  async (editedContact, thunkAPI) => {
+    try {
+      const { id, text } = editedContact;
+      const response = await axios.patch(`/contacts/${id}`, { name: text });
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const editContactNumber = createAsyncThunk(
+  "contacts/editContactNumber",
+  async (editedContact, thunkAPI) => {
+    try {
+      const { id, number } = editedContact;
+      const response = await axios.patch(`/contacts/${id}`, { number: number });
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);

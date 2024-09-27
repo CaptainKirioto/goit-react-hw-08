@@ -1,0 +1,15 @@
+.editInput {
+  margin-right: 5px;
+  outline: none;
+  border: 1px solid rgb(102, 94, 79);
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.save {
+  padding: 5px;
+  background-color: rgb(102, 94, 79);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}

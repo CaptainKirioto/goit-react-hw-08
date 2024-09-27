@@ -1,8 +1,8 @@
 import { Field, Formik, Form, ErrorMessage } from "formik";
 import s from "./RegistrationForm.module.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
-import { selectIsLoggedIn } from "../../redux/auth/selectors";
+
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { Bounce, toast } from "react-toastify";
@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const initialValues = {
     name: "",

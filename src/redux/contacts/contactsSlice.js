@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, deleteContact, addContact } from "./contactsOps";
+import {
+  fetchContacts,
+  deleteContact,
+  addContact,
+  editContactName,
+  editContactNumber,
+} from "./contactsOps";
 
 import { logout } from "../auth/operations";
 
@@ -53,6 +59,18 @@ const slice = createSlice({
         state.items = [];
         state.error = null;
         state.loading = false;
+      })
+      .addCase(editContactName.fulfilled, (state, action) => {
+        const contactIndex = state.items.findIndex(
+          (item) => item.id === action.payload.id
+        );
+        state.items[contactIndex] = action.payload;
+      })
+      .addCase(editContactNumber.fulfilled, (state, action) => {
+        const contactIndex = state.items.findIndex(
+          (item) => item.id === action.payload.id
+        );
+        state.items[contactIndex] = action.payload;
       }),
 });
 

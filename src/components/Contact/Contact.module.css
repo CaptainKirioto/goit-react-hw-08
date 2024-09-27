@@ -11,19 +11,20 @@
   min-width: 300px;
   gap: 40px;
   background-color: rgb(255, 240, 214);
-  & button {
-    /* background-color: rgb(61, 23, 4); */
-    /* background-color: rgb(176, 172, 160); */
-    background-color: rgb(102, 94, 79);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    height: 40px;
-    width: 60px;
-  }
-  & button:hover {
-    background-color: rgb(37, 35, 29);
-  }
+}
+
+.delete {
+  /* background-color: rgb(61, 23, 4); */
+  /* background-color: rgb(176, 172, 160); */
+  background-color: rgb(102, 94, 79);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 60px;
+}
+.delete:hover {
+  background-color: rgb(37, 35, 29);
 }
 
 .contactsInfo {
