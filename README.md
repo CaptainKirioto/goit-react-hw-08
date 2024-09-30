@@ -1,3 +1,3 @@
-# Contact Book
+# PhoneBook
 
-Contact Book developed with React and Redux
+PhoneBook developed with React, Redux, Rest API, CSS
