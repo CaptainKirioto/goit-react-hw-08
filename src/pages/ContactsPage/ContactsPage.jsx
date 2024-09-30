@@ -5,7 +5,7 @@ import Loader from "../../components/Loader/Loader";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import { selectError, selectLoading } from "../../redux/contacts/selectors";
 import { useEffect } from "react";
-import { fetchContacts } from "../../redux/contacts/contactsOps";
+import { fetchContacts } from "../../redux/contacts/operations";
 import s from "./ContactsPage.module.css";
 
 const ContactsPage = () => {
